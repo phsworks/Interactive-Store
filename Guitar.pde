@@ -1,59 +1,64 @@
-class Guitar{
-  float x, y;
+class Guitar {
+  float x, y, size;
   color guitarColor;
-  float size;
 
 
-  Guitar(float startX, float startY, float s, color col){
+  Guitar(float startX, float startY, float s, color col) {
     x = startX;
     y = startY;
     guitarColor = col;
     size = s;
   }
-  
 
-  void display(){
+  void displayAccoustic() {
+    pushMatrix();
+    translate(x, y);
+    scale(size / 120.0);
 
-  pushMatrix();
-  translate(x, y);
-  scale(size / 120);
+    // Neck top
+    fill(guitarColor);
+    noStroke();
+    triangle(-5, 8, 5, 8, 0, 4);
+    rect(-6, 8, 12, 15);
+    triangle(-6, 23, 6, 23, 0, 33);
 
-  // top
-  fill(guitarColor);
-  noStroke();
-  triangle(293, 302, 303, 302, 298, 299);
-  fill(guitarColor);
-  noStroke();
-  rect(292, 302, 12, 15);
-  triangle(292, 317, 304, 317, 298, 325);
+    // Neck
+    fill(guitarColor);
+    rect(-5, 25, 10, 40);
 
-  // body & neck
-  rect(293, 320, 10, 50);
-  fill(guitarColor);
-  ellipse(300, 390, 60, 50);
-  noStroke();
-  ellipse(300, 430, 75, 60);
-  fill(guitarColor);
-  stroke(#000000);
-  strokeWeight(1);
-  circle(299, 395, 20);
+    // Body
+    fill(guitarColor);
+    ellipse(0, 85, 60, 50);   // upper body
+    ellipse(0, 125, 75, 60);  // lower body
 
-  // strings
-  stroke(#1d1d1d);
-  strokeWeight(1);
-  line(295, 305, 295, 430);
-  line(297, 305, 297, 430);
-  line(299, 305, 299, 430);
-  line(301, 305, 301, 430);
+    // Sound hole
+    fill(#50382f);
+    stroke(#000000);
+    strokeWeight(1);
+    circle(0, 95, 20);
 
-  // bridge
-  rect(291.5, 430, 14, 5);
+    // top strings
+    stroke(#262626);
+    strokeWeight(1);
+    line(-8, 11, 8, 11);
+    line(-8, 15, 8, 15);
+    line(-8, 19, 8, 19);
 
-  popMatrix();
+    // Strings
+    stroke(#262626);
+    strokeWeight(1);
+    line(-3, 8, -3, 135);
+    line(-1, 8, -1, 135);
+    line(1, 8, 1, 135);
+    line(3, 8, 3, 135);
 
+    // Bridge
+    noStroke();
+    fill(#2b1a0d);
+    rect(-7, 135, 14, 5);
 
+    popMatrix();
   }
-
 
 
 

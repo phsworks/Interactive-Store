@@ -1,7 +1,6 @@
 class Background{
 
 
-
   float scaleX = width / 1000.0;
   float scaleY = height / 950.0;
 
