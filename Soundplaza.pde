@@ -2,18 +2,15 @@ Background bg;
 Guitar acoustic;
 
 void setup(){
-  size(1000, 950);
+  size(1200, 1000);
   bg = new Background();
-  acoustic = new Guitar(300, 300, #50382f);
+  acoustic = new Guitar(50, 50, 250, #744c3b);
   bg.display();
 }
 
 
 void draw(){
   acoustic.display();
-
-
-
 
 
 }

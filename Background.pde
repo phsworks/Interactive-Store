@@ -1,5 +1,21 @@
 class Background{
+
+
+
+  float scaleX = width / 1000.0;
+  float scaleY = height / 950.0;
+
   void display(){
+    // original design
+    float baseW = 1000.0;
+    float baseH = 950.0;
+
+    // scale
+    float scaleX = width / baseW;
+    float scaleY = height / baseH;
+
+    pushMatrix();
+    scale(scaleX, scaleY);
     background(#50382f);
     color mainBrown = #744C3B ;
     color secondBrown = #6B3A2A;
@@ -91,7 +107,7 @@ class Background{
   strokeWeight(2);
   rect(0, 850, width, 120);
 
-
+  popMatrix();
 
   }
 
