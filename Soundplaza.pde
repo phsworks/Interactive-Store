@@ -11,7 +11,6 @@ void setup(){
   g1 = new Guitar(300, 350, 250, #744c3b);
   g2 = new Guitar(500, 350, 250, #87839c);
   bg = new Background();
-
   acoustic = new SoundFile(this, "Sounds/acoustic.wav");
 
 
@@ -25,19 +24,21 @@ void draw(){
   g2.displayAccoustic();
 
 
-  for (Note n : notes) {
+  for (int i = 0; i < notes.size(); i++) {
+    Note n = notes.get(i);
     n.move();
     n.display();
   }
 }
 
 void mousePressed(){
-    if (mouseX >= 295 && mouseX <= 310  && mouseY >= 245 && mouseY <= 630){
+    if (mouseX >= 295 && mouseX <= 310  && mouseY >= 265 && mouseY <= 630){
+
       acoustic.play();
       float x = random(255, 350);
-      float y = random(245, 630);
+      float y = random(340, 630);
       float size = random(80, 130);
-      color c = color(random(50, 255), random(50, 255), random(30, 60));
+      color c = color(random(0, 255), random(0, 255), random(0, 255));
       notes.add(new Note(x, y, size, c));
 
     }
