@@ -91,7 +91,7 @@ class Background{
   // bottom bar under window
   fill(mainBrown);
   stroke(#000000);
-  strokeWeight(6);
+  strokeWeight(3);
   rect(90, 740, 820, 30, 5); // was 140
 
   // store sign above window

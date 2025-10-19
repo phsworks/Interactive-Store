@@ -16,14 +16,14 @@ class Guitar {
     scale(size / 120.0);
 
     // Neck top
-    fill(guitarColor);
+    fill(#373332);
     noStroke();
     triangle(-5, 8, 5, 8, 0, 4);
     rect(-6, 8, 12, 15);
     triangle(-6, 23, 6, 23, 0, 33);
 
     // Neck
-    fill(guitarColor);
+    fill(#373332);
     rect(-5, 25, 10, 40);
 
     // Body
@@ -60,78 +60,128 @@ class Guitar {
     popMatrix();
   }
 
+
   void displayElectric() {
+    pushMatrix();
+    translate(x, y);
+    scale(size / 120.0);
+
+    // Neck top
+    fill(#c7ac70);
+    noStroke();
+    triangle(-5, 8, 5, 8, 0, 4);
+    rect(-6, 8, 12, 15);
+    triangle(-6, 23, 6, 23, 0, 33);
+
+    // Neck
+    fill(#b7aa98);
+    rect(-5, 15, 10, 100);
+
+    // Body
+    fill(guitarColor);
+    ellipse(0, 85, 48, 35);   // upper body
+    ellipse(0, 125, 50, 60);  // lower body
+    fill(#122862);
+    ellipse(-13, 62, 16, 30);
+    ellipse(13, 62, 16, 30);
+
+    // sound buttons
+    fill(#373c3c);
+    strokeWeight(1);
+    stroke(#000000);
+    circle(10, 120, 5);
+    circle(15, 130, 5);
+
+    // rectangles
+    fill(#cfcece);
+    stroke(#000000);
+    rect(-5, 80, 10, 3, 20);
+    rect(-5, 90, 10, 3, 20);
+    rect(-5, 100, 10, 3, 20);
+
+    // top strings
+    stroke(#b5b5b5);
+    strokeWeight(1);
+    line(-8, 11, 8, 11);
+    line(-8, 15, 8, 15);
+    line(-8, 19, 8, 19);
+
+    // Strings
+    stroke(#262626);
+    strokeWeight(1);
+    line(-3, 8, -3, 135);
+    line(-1, 8, -1, 135);
+    line(1, 8, 1, 135);
+    line(3, 8, 3, 135);
+
+    // Bridge
+    noStroke();
+    fill(#2b1a0d);
+    rect(-7, 135, 14, 5);
+
+    popMatrix();
+  }
+
+ void displayElectric2() {
   pushMatrix();
   translate(x, y);
   scale(size / 120.0);
 
-  // === HEADSTOCK ===
-  fill(#9a9ac5);
+  // Neck top
+  fill(#c7ac70);
   noStroke();
-  beginShape();
-  vertex(-6, 0);
-  vertex(6, 0);
-  vertex(9, 8);
-  vertex(5, 14);
-  vertex(-5, 14);
-  vertex(-8, 6);
-  endShape(CLOSE);
+  triangle(-5, 8, 5, 8, 0, 4);
+  rect(-6, 8, 12, 15);
+  triangle(-6, 23, 6, 23, 0, 33);
 
-  // tuning pegs
-  fill(#222222);
-  for (int i = 0; i < 3; i++) ellipse(7, 3 + i * 3, 2, 2);
+  // Neck
+  fill(#b7aa98);
+  rect(-5, 15, 10, 100);
 
-  // === NECK ===
-  fill(#c19a6b);
-  rect(-3, 14, 6, 55);
-
-  // frets
-  stroke(90);
-  strokeWeight(0.7);
-  for (int i = 18; i < 65; i += 4) line(-3, i, 3, i);
-  noStroke();
-
-  // === BODY (met één triangle, omgekeerd en asymmetrisch) ===
+  // Body (Flying V)
   fill(guitarColor);
-  // Linker punt iets verder naar buiten en lager voor asymmetrie
-  triangle(-40, 150, 45, 150, 0, 60);
-
+  stroke(#000000);
+  strokeWeight(1);
+  triangle(-40, 165, 40, 155, 0, 65);
   fill(#122862);
-  strokeWeight(3);
-  triangle(-20, 150, 25, 150, 0, 125);
+  strokeWeight(0);
+  triangle(-25, 165, 20, 160, 0, 137);
 
-  // halsverbinding
-  fill(#6f4c2e);
-  rect(-5, 65, 10, 5);
+  // sound buttons
+  fill(#373c3c);
+  strokeWeight(1);
+  stroke(#000000);
+  circle(14, 120, 5);
+  circle(18, 130, 5);
 
-  // === PICKUPS ===
-  fill(#111111);
-  rect(-9, 80, 18, 6, 2);
-  rect(-9, 93, 18, 6, 2);
-  rect(-9, 106, 18, 6, 2);
+  // pickups (rectangles)
+  fill(#cfcece);
+  stroke(#000000);
+  rect(-5, 90, 10, 3, 20);
+  rect(-5, 100, 10, 3, 20);
+  rect(-5, 110, 10, 3, 20);
 
-  // === BRIDGE ===
-  fill(#333333);
-  rect(-8, 118, 16, 3);
+  // top strings
+  stroke(#b5b5b5);
+  strokeWeight(1);
+  line(-8, 11, 8, 11);
+  line(-8, 15, 8, 15);
+  line(-8, 19, 8, 19);
 
-  // === CONTROL KNOBS ===
-  fill(#444444);
-  ellipse(20, 100, 6, 6);
-  ellipse(26, 108, 6, 6);
-  ellipse(32, 116, 6, 6);
+  // Strings
+  stroke(#262626);
+  strokeWeight(1);
+  line(-3, 8, -3, 125);
+  line(-1, 8, -1, 125);
+  line(1, 8, 1, 125);
+  line(3, 8, 3, 125);
 
-  // === STRINGS ===
-  stroke(#dddddd);
-  strokeWeight(0.8);
-  for (int i = -2; i <= 2; i++) line(i, 0, i, 120);
+  // Bridge
+  noStroke();
+  fill(#2b1a0d);
+  rect(-7, 125, 14, 5);
 
   popMatrix();
-
-  }
-
-
-
-
-
+}
 
 }
