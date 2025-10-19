@@ -21,7 +21,7 @@ void draw(){
 
   bg.display();
   g1.displayAccoustic();
-  g2.displayAccoustic();
+  g2.displayElectric();
 
 
   for (int i = 0; i < notes.size(); i++) {
