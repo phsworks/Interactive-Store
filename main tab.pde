@@ -1,13 +1,13 @@
 class OpenSign {
-  float x, y;
-  float w, h;
+  float x, y;      
+  float w, h;      
   String message;
   color boxColor;
   color borderColor;
   color textColor;
   color dimTextColor;
   color circleColor;
-  boolean[] letterOn;
+  boolean[] letterOn;  
   int timer;
 
   OpenSign(float x, float y, float w, float h) {
@@ -16,11 +16,11 @@ class OpenSign {
     this.w = w;
     this.h = h;
     this.message = "OPEN";
-    this.boxColor = color(0);
-    this.borderColor = color(255);
-    this.textColor = color(255, 0, 0);
-    this.dimTextColor = color(100, 0, 0);
-    this.circleColor = color(0, 0, 255);
+    this.boxColor = color(0);             
+    this.borderColor = color(255);        
+    this.textColor = color(255, 0, 0);    
+    this.dimTextColor = color(100, 0, 0); 
+    this.circleColor = color(0, 0, 255);  
     this.letterOn = new boolean[message.length()];
     for (int i = 0; i < letterOn.length; i++) letterOn[i] = false;
     timer = 0;
@@ -36,7 +36,6 @@ class OpenSign {
 
   void display() {
     // Draw black rectangle for the sign
-    pushStyle();
     fill(boxColor);
     stroke(borderColor);
     strokeWeight(4);
@@ -69,6 +68,5 @@ class OpenSign {
       textSize(h / 2);
       text(message.charAt(i), letterX, y);
     }
-    popStyle();
   }
 }
