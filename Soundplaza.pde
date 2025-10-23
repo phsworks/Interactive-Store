@@ -11,18 +11,28 @@ ArrayList<Note> notes = new ArrayList<Note>();
 
 SoundPlazaLogo logo;
 OpenSign openSign;
+DunlopLogo dunlop;
+MXRLogo mxr;
 
 void setup(){
   size(1200, 1000);
-  g1 = new Guitar(300, 450, 180, #744c3b);
-  g2 = new Guitar(600, 450, 180, #cf6d69);
-  g3 = new Guitar(900, 450, 180, #85c5f4);
   bg = new Background();
+
+  // logos
+  logo = new SoundPlazaLogo(550, 310, color(255));
+  openSign = new OpenSign(300, 85, 170, 60);
+  mxr = new MXRLogo(500, 50, 160, 70);
+  dunlop = new DunlopLogo(800, 50, 160, 70);
+
+  // guitars
+  g1 = new Guitar(300, 450, 200, #744c3b);
+  g2 = new Guitar(600, 450, 200, #cf6d69);
+  g3 = new Guitar(900, 450, 200, #85c5f4);
+
+  // sounds
   acoustic = new SoundFile(this, "Sounds/acoustic.wav");
   electric = new SoundFile(this, "Sounds/electric.wav");
   electric2 = new SoundFile(this, "Sounds/electric2.wav");
-  logo = new SoundPlazaLogo(390, 310, color(255));
-  openSign = new OpenSign(300, 85, 170, 60);
 
 
 }
@@ -37,8 +47,11 @@ void draw(){
   logo.display();
   openSign.update();
   openSign.display();
+  dunlop.display();
+  mxr.display();
 
 
+  // dipslay music notes when strings played
   for (int i = 0; i < notes.size(); i++) {
     Note n = notes.get(i);
     n.move();

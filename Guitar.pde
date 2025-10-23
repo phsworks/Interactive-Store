@@ -91,7 +91,6 @@ class Guitar {
     stroke(#000000);
     circle(10, 120, 5);
     circle(15, 130, 5);
-
     // rectangles
     fill(#cfcece);
     stroke(#000000);
