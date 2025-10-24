@@ -1,6 +1,4 @@
 class Background{
-
-
   float scaleX = width / 1000.0;
   float scaleY = height / 950.0;
 
@@ -21,6 +19,8 @@ class Background{
     color wall = #773940;
     color stone = #87839c;
     color glass = #122862;
+    color wood = #c2ad82;
+
 
 
 
@@ -33,12 +33,12 @@ class Background{
 
 
   // wall below window
+  fill(#000000);
+  line(70, 770, 900, 770);
   fill(wall);
   stroke(#4a2a18);
   strokeWeight(5);
-  rect(60, 700, 900, 150);
-
-
+  rect(60, 750, 900, 130);
 
   // top pillars
   fill(mainBrown);
@@ -95,19 +95,16 @@ class Background{
   rect(140, 140, 720, 600); // was 190
 
   // wood below guitars
-    fill(secondBrown);
-    stroke(#4a2a18);
-    strokeWeight(5);
-    rect(150, 690, 700, 55);
+  fill(wood);
+  stroke(#000000);
+  strokeWeight(2);
+  rect(140, 675, 720, 75);
 
   // bottom bar under window
   fill(mainBrown);
   stroke(#000000);
   strokeWeight(3);
   rect(90, 740, 820, 30, 5); // was 140
-
-
-
 
 
   // store sign above window
@@ -125,6 +122,8 @@ class Background{
   popMatrix();
 
   }
+
+
 
 
 

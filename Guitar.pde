@@ -141,10 +141,10 @@ class Guitar {
   fill(guitarColor);
   stroke(#000000);
   strokeWeight(1);
-  triangle(-40, 165, 40, 155, 0, 65);
+  triangle(-40, 155, 40, 155, 0, 65);
   fill(#122862);
   strokeWeight(0);
-  triangle(-25, 165, 20, 160, 0, 137);
+  triangle(-25, 155, 20, 155, 0, 137);
 
   // sound buttons
   fill(#373c3c);
