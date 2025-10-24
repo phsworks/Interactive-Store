@@ -22,17 +22,23 @@ class Background{
     color stone = #87839c;
     color glass = #122862;
 
-  // wall below window
-  fill(wall);
-  stroke(#4a2a18);
-  strokeWeight(5);
-  rect(60, 700, 900, 150);
+
+
 
   // inner wall color
   fill(secondBrown);
   stroke(#3a1e18);
   strokeWeight(3);
   rect(110, 100, 780, 640);
+
+
+  // wall below window
+  fill(wall);
+  stroke(#4a2a18);
+  strokeWeight(5);
+  rect(60, 700, 900, 150);
+
+
 
   // top pillars
   fill(mainBrown);
@@ -88,11 +94,21 @@ class Background{
   strokeWeight(5);
   rect(140, 140, 720, 600); // was 190
 
+  // wood below guitars
+    fill(secondBrown);
+    stroke(#4a2a18);
+    strokeWeight(5);
+    rect(150, 690, 700, 55);
+
   // bottom bar under window
   fill(mainBrown);
   stroke(#000000);
   strokeWeight(3);
   rect(90, 740, 820, 30, 5); // was 140
+
+
+
+
 
   // store sign above window
   fill(#e28e39);

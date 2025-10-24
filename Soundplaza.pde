@@ -14,6 +14,11 @@ OpenSign openSign;
 DunlopLogo dunlop;
 MXRLogo mxr;
 
+color accousticColor = #744c3b;
+color electricColor = #cf6d69;
+color rockColor = #85c5f4;
+
+
 void setup(){
   size(1200, 1000);
   bg = new Background();
@@ -25,9 +30,11 @@ void setup(){
   dunlop = new DunlopLogo(800, 50, 160, 70);
 
   // guitars
-  g1 = new Guitar(300, 450, 200, #744c3b);
-  g2 = new Guitar(600, 450, 200, #cf6d69);
-  g3 = new Guitar(900, 450, 200, #85c5f4);
+  g1 = new Guitar(300, 450, 200, accousticColor);
+  g2 = new Guitar(600, 450, 200, electricColor);
+  g3 = new Guitar(900, 450, 200, rockColor);
+
+
 
   // sounds
   acoustic = new SoundFile(this, "Sounds/acoustic.wav");
@@ -49,6 +56,11 @@ void draw(){
   openSign.display();
   dunlop.display();
   mxr.display();
+
+
+  g1.setColor(accousticColor);
+  g2.setColor(electricColor);
+  g3.setColor(rockColor);
 
 
   // dipslay music notes when strings played
@@ -91,10 +103,18 @@ void mousePressed(){
 
     }
 
+  }
+
+  void keyPressed() {
+    if (key == ' ') {
+      accousticColor = color(random(90, 170), random(60, 100), random(30, 60));
+      electricColor = color(random(0, 255), random(0, 255), random(0, 255));
+      rockColor = color(random(50, 120), random(0, 60), random(40, 100));
+    }
+  }
 
 
 
 
 
 
-}

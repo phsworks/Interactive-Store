@@ -183,4 +183,9 @@ class Guitar {
   popMatrix();
 }
 
+
+void setColor(color c) {
+  this.guitarColor = c;
+}
+
 }

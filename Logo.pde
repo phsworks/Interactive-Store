@@ -27,7 +27,7 @@ class SoundPlazaLogo {
     strokeCap(ROUND); //makes the font round
 
     // circle around s
-    arc(20, -35, 140, 140, HALF_PI, TWO_PI + QUARTER_PI);
+    arc(20, -35, 140, 140, HALF_PI, TWO_PI + QUARTER_PI);``
 
     popMatrix();
   }
