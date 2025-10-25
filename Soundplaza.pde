@@ -14,16 +14,11 @@ OpenSign openSign;
 DunlopLogo dunlop;
 MXRLogo mxr;
 
-Light light1;
-Light light2;
-Light light3;
-Light light4;
-
 color accousticColor = #744c3b;
 color electricColor = #cf6d69;
 color rockColor = #85c5f4;
 
-color lightColor = #000000;
+// color lightColor = #000000;
 
 
 void setup(){
@@ -41,11 +36,6 @@ void setup(){
   g2 = new Guitar(600, 450, 200, electricColor);
   g3 = new Guitar(900, 450, 200, rockColor);
 
-  light1 = new Light(200, 200, 400, lightColor);
-  light2 = new Light(300, 210, 300, lightColor);
-  light3 = new Light(500, 200, 350, lightColor);
-  light4 = new Light(200, 220, 400, lightColor);
-
 
   // sounds
   acoustic = new SoundFile(this, "Sounds/acoustic.wav");
@@ -59,10 +49,6 @@ void setup(){
 void draw(){
 
   bg.display();
-  light1.display();
-  light2.display();
-  light3.display();
-  light4.display();
   g1.displayAccoustic();
   g2.displayElectric();
   g3.displayElectric2();
@@ -120,22 +106,7 @@ void mousePressed(){
 
   }
 
-  void mouseMoved() {
 
-    // when mouse is close to light go on
-    if (abs(mouseX - light1.x) < 10){
-      light1.setColor(color(random(0, 255), random(0, 255), random(0, 255)));
-    }
-    if (abs(mouseX - light2.x) < 10){
-      light2.setColor(color(random(0, 255), random(0, 255), random(0, 255)));
-    }
-    if (abs(mouseX - light3.x) < 10){
-      light3.setColor(color(random(0, 255), random(0, 255), random(0, 255)));
-    }
-    if (abs(mouseX - light4.x) < 10){
-      light4.setColor(color(random(0, 255), random(0, 255), random(0, 255)));
-    }
-  }
 
   void keyPressed() {
     if (key == ' ') {
