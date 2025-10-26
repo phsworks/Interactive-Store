@@ -1,3 +1,5 @@
+// Piet-Hein Schouten 3708349 - Miles Berger 2906917
+
 class SoundPlazaLogo {
   float x, y;
   color logoColor;

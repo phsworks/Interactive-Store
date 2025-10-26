@@ -1,3 +1,5 @@
+// Final Programming Assignment - Piet-Hein Schouten 3708349 - Miles Berger 2906917
+
 import processing.sound.*;
 SoundFile acoustic;
 SoundFile electric;
@@ -26,10 +28,10 @@ void setup(){
   bg = new Background();
 
   // logos
-  logo = new SoundPlazaLogo(550, 310, color(255));
-  openSign = new OpenSign(300, 85, 170, 60);
-  mxr = new MXRLogo(500, 50, 160, 70);
-  dunlop = new DunlopLogo(800, 50, 160, 70);
+  logo = new SoundPlazaLogo(530, 305, color(255));
+  openSign = new OpenSign(300, 83, 170, 55);
+  mxr = new MXRLogo(510, 51, 160, 65);
+  dunlop = new DunlopLogo(800, 51, 160, 65);
 
   // guitars
   g1 = new Guitar(300, 450, 200, accousticColor);
@@ -106,8 +108,7 @@ void mousePressed(){
 
   }
 
-
-
+// random guitar colors
   void keyPressed() {
     if (key == ' ') {
       accousticColor = color(random(90, 170), random(60, 100), random(30, 60));

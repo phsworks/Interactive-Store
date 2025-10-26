@@ -1,7 +1,9 @@
+// Piet-Hein Schouten 3708349 - Miles Berger 2906917
+
 class DunlopLogo {
   float x, y, w, h;
   PFont font;
-  
+
   DunlopLogo(float x, float y, float w, float h) {
     this.x = x;
     this.y = y;

@@ -1,3 +1,5 @@
+// Piet-Hein Schouten 3708349 - Miles Berger 2906917
+
 class Background{
   float scaleX = width / 1000.0;
   float scaleY = height / 950.0;
@@ -21,16 +23,11 @@ class Background{
     color glass = #122862;
     color wood = #c2ad82;
 
-
-
-
-
   // inner wall color
   fill(secondBrown);
   stroke(#3a1e18);
   strokeWeight(3);
   rect(110, 100, 780, 640);
-
 
   // wall below window
   fill(#000000);
@@ -122,9 +119,6 @@ class Background{
   popMatrix();
 
   }
-
-
-
 
 
 }

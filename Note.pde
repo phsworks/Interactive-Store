@@ -1,3 +1,5 @@
+// Piet-Hein Schouten 3708349 - Miles Berger 2906917
+
 class Note {
   float x, y, size;
   color c;
