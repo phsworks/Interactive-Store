@@ -1,4 +1,5 @@
-// Final Programming Assignment - Piet-Hein Schouten 3708349 - Miles Berger 2906917
+// Final Programming Assignment - Group 25 - Piet-Hein Schouten 3708349 - Miles Berger 2906917
+// main soundplaza file with setup, draw and events
 
 import processing.sound.*;
 SoundFile acoustic;
@@ -20,7 +21,6 @@ color accousticColor = #744c3b;
 color electricColor = #cf6d69;
 color rockColor = #85c5f4;
 
-// color lightColor = #000000;
 
 
 void setup(){
@@ -50,6 +50,7 @@ void setup(){
 
 void draw(){
 
+  // display objects
   bg.display();
   g1.displayAccoustic();
   g2.displayElectric();
@@ -59,8 +60,8 @@ void draw(){
   openSign.display();
   dunlop.display();
   mxr.display();
-
-
+  
+  // guitars change colors
   g1.setColor(accousticColor);
   g2.setColor(electricColor);
   g3.setColor(rockColor);
@@ -74,6 +75,8 @@ void draw(){
   }
 }
 
+
+// working of the guitar strings for different guitars
 void mousePressed(){
     if (mouseX >= 295 && mouseX <= 310  && mouseY >= 265 && mouseY <= 630){
 
@@ -116,9 +119,3 @@ void mousePressed(){
       rockColor = color(random(50, 120), random(0, 60), random(40, 100));
     }
   }
-
-
-
-
-
-

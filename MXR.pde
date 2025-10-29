@@ -1,5 +1,5 @@
-// Piet-Hein Schouten 3708349 - Miles Berger 2906917
-
+// Group 25 - Piet-Hein Schouten 3708349 - Miles Berger 2906917
+// mxr logo class
 class MXRLogo {
   float x, y, w, h;
   PFont font;

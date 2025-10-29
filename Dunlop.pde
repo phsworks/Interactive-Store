@@ -1,4 +1,5 @@
-// Piet-Hein Schouten 3708349 - Miles Berger 2906917
+// Group 25 -Piet-Hein Schouten 3708349 - Miles Berger 2906917
+// class for dunlop logo
 
 class DunlopLogo {
   float x, y, w, h;

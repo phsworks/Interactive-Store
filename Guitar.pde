@@ -1,5 +1,5 @@
-// Piet-Hein Schouten 3708349 - Miles Berger 2906917
-
+// Group 25 - Piet-Hein Schouten 3708349 - Miles Berger 2906917
+// guitar class with 3 three different types
 class Guitar {
   float x, y, size;
   color guitarColor;

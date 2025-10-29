@@ -1,5 +1,5 @@
-// Piet-Hein Schouten 3708349 - Miles Berger 2906917
-
+// Group 25 - Piet-Hein Schouten 3708349 - Miles Berger 2906917
+// main logo class of Soundplaza
 class SoundPlazaLogo {
   float x, y;
   color logoColor;

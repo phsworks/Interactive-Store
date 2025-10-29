@@ -1,5 +1,5 @@
-// Piet-Hein Schouten 3708349 - Miles Berger 2906917
-
+// Group 25 - Piet-Hein Schouten 3708349 - Miles Berger 2906917
+// open sign class with letter animation
 class OpenSign {
   float x, y;
   float w, h;
@@ -65,7 +65,8 @@ class OpenSign {
         }
         fill(textColor);
       } else {
-        fill(dimTextColor); // dimmed red letter
+       // dimmed red letter
+        fill(dimTextColor);
       }
 
       textSize(h / 2);

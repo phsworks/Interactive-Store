@@ -1,4 +1,5 @@
-// Piet-Hein Schouten 3708349 - Miles Berger 2906917
+// Group 25 - Piet-Hein Schouten 3708349 - Miles Berger 2906917
+// background class that adjusts to size
 
 class Background{
   float scaleX = width / 1000.0;
@@ -16,6 +17,8 @@ class Background{
     pushMatrix();
     scale(scaleX, scaleY);
     background(#50382f);
+    
+    // colors background
     color mainBrown = #744C3B ;
     color secondBrown = #6B3A2A;
     color wall = #773940;
@@ -63,15 +66,15 @@ class Background{
   fill(mainBrown);
   stroke(#2c1a1a);
   strokeWeight(6);
-  rect(940, 35, 40, 670); // was 990
-  rect(920, 35, 40, 670); // was 970
-  rect(910, 35, 20, 670); // was 960
+  rect(940, 35, 40, 670); 
+  rect(920, 35, 40, 670); 
+  rect(910, 35, 20, 670); 
 
   // left stone pillar
   fill(stone);
   stroke(#2c1a1a);
   strokeWeight(6);
-  rect(20, 700, 70, 300); // was 70
+  rect(20, 700, 70, 300); 
 
   // right stone pillar
   fill(stone);
@@ -89,7 +92,7 @@ class Background{
   fill(glass);
   stroke(#1a1a1a);
   strokeWeight(5);
-  rect(140, 140, 720, 600); // was 190
+  rect(140, 140, 720, 600); 
 
   // wood below guitars
   fill(wood);
@@ -101,14 +104,14 @@ class Background{
   fill(mainBrown);
   stroke(#000000);
   strokeWeight(3);
-  rect(90, 740, 820, 30, 5); // was 140
+  rect(90, 740, 820, 30, 5); 
 
 
   // store sign above window
   fill(#e28e39);
   stroke(#000000);
   strokeWeight(4);
-  rect(130, 45, 740, 70); // was 180
+  rect(130, 45, 740, 70); 
 
   // ground
   fill(#5b5b5b);

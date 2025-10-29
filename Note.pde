@@ -1,5 +1,5 @@
-// Piet-Hein Schouten 3708349 - Miles Berger 2906917
-
+// Group 25 - Piet-Hein Schouten 3708349 - Miles Berger 2906917
+// music note class
 class Note {
   float x, y, size;
   color c;
@@ -20,7 +20,7 @@ class Note {
   fill(c);
   noStroke();
   pushMatrix();
-  rotate(radians(-20));  // maakt hem iets schuin zoals echte noten
+  rotate(radians(-20));  
   ellipse(0, 0, 20, 15);
   popMatrix();
 
