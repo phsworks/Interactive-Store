@@ -30,7 +30,8 @@ class OpenSign {
 
   void update() {
     timer++;
-    int index = (timer / 20) % message.length(); // change every ~0.33 sec
+    // change every ~0.33 sec (every 20 frames) & modulo takes care of starting over
+    int index = (timer / 20) % message.length();
     for (int i = 0; i < letterOn.length; i++) {
       letterOn[i] = (i == index);
     }

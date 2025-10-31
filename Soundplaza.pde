@@ -24,7 +24,7 @@ color rockColor = #85c5f4;
 
 
 void setup(){
-  size(1200, 1000);
+  size(1150, 1000);
   bg = new Background();
 
   // logos
@@ -60,7 +60,7 @@ void draw(){
   openSign.display();
   dunlop.display();
   mxr.display();
-  
+
   // guitars change colors
   g1.setColor(accousticColor);
   g2.setColor(electricColor);

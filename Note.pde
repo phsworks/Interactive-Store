@@ -20,7 +20,7 @@ class Note {
   fill(c);
   noStroke();
   pushMatrix();
-  rotate(radians(-20));  
+  rotate(radians(-20));
   ellipse(0, 0, 20, 15);
   popMatrix();
 
