@@ -24,19 +24,19 @@ color rockColor = #85c5f4;
 
 
 void setup(){
-  size(1150, 1000);
+  size(1480, 1000);
   bg = new Background();
 
   // logos
-  logo = new SoundPlazaLogo(530, 305, color(255));
-  openSign = new OpenSign(300, 83, 170, 55);
-  mxr = new MXRLogo(510, 51, 160, 65);
-  dunlop = new DunlopLogo(800, 51, 160, 65);
+  logo = new SoundPlazaLogo(670, 305, color(255));
+  openSign = new OpenSign(350, 83, 170, 55);
+  mxr = new MXRLogo(680, 51, 160, 65);
+  dunlop = new DunlopLogo(1050, 51, 160, 65);
 
   // guitars
-  g1 = new Guitar(300, 450, 200, accousticColor);
-  g2 = new Guitar(600, 450, 200, electricColor);
-  g3 = new Guitar(900, 450, 200, rockColor);
+  g1 = new Guitar(400, 450, 200, accousticColor);
+  g2 = new Guitar(750, 450, 200, electricColor);
+  g3 = new Guitar(1100, 450, 200, rockColor);
 
 
   // sounds
